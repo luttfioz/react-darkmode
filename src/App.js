@@ -15,7 +15,7 @@ function App(props) {
   return (
     <div className={'App ' + (props.darkmode ? 'App-Dark' : 'App-Light')}>
       <DarkModeDemo checked={props.darkmode} onChecked={handleChange} />
-      <button onClick={handleCount}>Toogle Count {props.count}</button>
+      <button data-testid="count" onClick={handleCount}>Toogle Count {props.count}</button>
     </div>
   );
 }
