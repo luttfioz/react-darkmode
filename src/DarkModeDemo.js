@@ -11,6 +11,7 @@ export default function DarkModeDemo(props) {
         <Switch
           checked={props.checked}
           onChange={handleChange}
+          data-testid="toggle"
           onColor="#86d3ff"
           onHandleColor="#2693e6"
           handleDiameter={30}

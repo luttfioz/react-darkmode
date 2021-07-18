@@ -23,8 +23,18 @@ function handleChange(event) {
 }
 
 it("renders with checked", () => {
+    const handleChange = jest.fn();
     act(() => {
         render(<DarkModeDemo checked={true} onChecked={handleChange} />, container);
     });
     expect(container.textContent).toBe("Hello StackBlitz!Start editing to see some magic happen :)");
+
+
+    const button = document.querySelector("[data-testid=toggle]");
+
+    act(() => {
+        button.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+    });
+
+    expect(handleChange).toHaveBeenCalledTimes(1);
 });
