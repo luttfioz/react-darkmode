@@ -1,0 +1,21 @@
+.App {
+  background-color: bisque;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.App-Light {
+  background-color: aliceblue;
+  color: slategray;
+}
+
+.App-Dark {
+  background-color: black;
+  color: lavender;
+}
+
+.Switch {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
